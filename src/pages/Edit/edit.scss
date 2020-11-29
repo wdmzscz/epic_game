@@ -1,0 +1,51 @@
+.editPanel {
+    height: 100%;
+    margin: 5px;
+    padding:10px;
+
+
+    .enterInput,.ant-btn-primary {
+        width: 240px;
+         height: 40px;
+         margin: 10px 5px 5px 2px;
+         border: 4px solid #ccc!important;
+         border-radius: 1ex;
+         text-align: center;
+         background-color: darkgrey;
+         color:white;
+
+    };
+
+    .selectInput .ant-input-group .ant-select-show-arrow {
+        width: 240px;
+        margin: 10px 5px 5px 2px;
+        border: 4px solid #ccc!important;
+        border-radius: 1ex;
+    }
+
+    .selectInput{
+        P{  
+            position: relative;
+            bottom: -10px;
+            left: 5px;
+            margin: 0px;
+            color:white;
+        }
+    }
+    
+    .selectInput  .ant-input-search{
+        margin: 10px 5px 5px 2px;
+        border: 4px solid #ccc!important;
+        border-radius: 1ex;
+        width: 240px;
+    }
+
+
+
+
+
+
+  
+
+
+};

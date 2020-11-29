@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-//import { List, Typography, Divider } from 'antd';
+import {CloseCircleOutlined} from '@ant-design/icons'
+import './item.scss';
 
 export default class Item extends Component{
 
@@ -19,11 +20,9 @@ export default class Item extends Component{
     render(){
        let {name} = this.props;
        return(
-          <div>
-            <p>{name}
-                <span onClick={this.deleteItemInList}>删除</span>
-            </p>
-          </div>
+            <li className="list-group-item list-group-item-action">{name}
+                <span className='icon' onClick={this.deleteItemInList}><CloseCircleOutlined /></span>
+            </li>
        )
     }
 }
