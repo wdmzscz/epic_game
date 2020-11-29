@@ -16,7 +16,7 @@ export default class List extends Component{
        return(
           <div>
             <div className="column" >
-               <div className="list-group-item list-group-item-action" style={{textAlign:'center'}}>item</div>
+               <div className="list-group-item list-group-item-action" style={{textAlign:'center'}}>{item[0]?(item[0].group === 'col1'? 'COLUMN 1':'COLUMN 2'):'Column 1'}</div>
                <ul  className="list-group">
                   {item.map((item)=>{
                      return (

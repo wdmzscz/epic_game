@@ -37,8 +37,6 @@ export default class Edit extends Component{
    }
 
    selectItemInLis=(value)=>{
-      debugger;
-      //this.enableBtn();
       this.props.selectItem()
       this.selectValue = value
       console.log('select Value',value)
