@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+  }
+  
+  .container:nth-last-child(n){
+    width: 270%;
+    .col:nth-last-child(n){
+      width: 100%;
+    }
+  }
+  
+  .row:nth-child(2){
+    background-color: #6c757d;
+    width: 108%;
+  }
+  
+  
+  
+  
+  
+  
+  
