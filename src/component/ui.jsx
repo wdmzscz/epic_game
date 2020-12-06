@@ -7,16 +7,11 @@ import Edit from  '../pages/Edit/Edit'
 
 export default class Ui extends React.Component{
 
-   state = {
-      item:{
-         col1:[],
-         col2:[]
-       }
-   }
-
-   componentDidMount(){
-       console.log(this.props)
-   }
+    constructor(props){
+        super(props);
+        this.props = props
+        //console.log('this is redux props',this.props)
+    }
 
    getColumnData =async ()=>{
       return await new Promise((resolve)=>{
@@ -64,7 +59,7 @@ export default class Ui extends React.Component{
             }
             ]
          }
-         this.setState({item:data})
+         this.props.get({item:data})
       });
    }
 
@@ -72,16 +67,8 @@ export default class Ui extends React.Component{
       this.loadData();
    }
 
-   addItem=(itemobj,col)=>{
-      //let {item1} = this.state.item
-      let itemArray=[...this.state.item[col]];
-      itemArray.unshift(itemobj);
-      //console.log('item1',itemArray);
-      this.setState(state=>(
-         state.item[col] = itemArray
-      ))
-      console.log('setState',this.state);
-     
+   addItem=(itemobj)=>{
+      this.props.add(itemobj)
    };
 
    deleteItem=(group,id)=>{
@@ -123,8 +110,8 @@ export default class Ui extends React.Component{
 
 
     render(){
-       let {item} = this.state;
-       let {col1,col2} = this.state.item
+       let {item} = this.props.data;
+       let {col1,col2} = this.props.data.item
        return(
           <div style={{backgroundColor:'#6c757d'}}>
             <div className='container'>
@@ -144,6 +131,7 @@ export default class Ui extends React.Component{
                </div>
             </div>
           </div>
+        //<div>test</div>
        )
     }
 }

@@ -11,6 +11,7 @@ export default class Edit extends Component{
    constructor(props){
       super(props)
       this.props = props;
+      console.log('this is edit props',this.props)
       this.selectValue = '';
       this.disabled = true;
    }
@@ -23,9 +24,8 @@ export default class Edit extends Component{
    
    addItemInList=()=>{
       let textValue = this.textInput.value;
-      let column = this.selectValue
       //add item 
-      this.props.addItem({id:uuid(),name:textValue,group:this.selectValue},column);
+      this.props.addItem({id:uuid(),name:textValue,group:this.selectValue});
 
       //reset input to empty
       this.textInput.value='';

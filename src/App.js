@@ -1,12 +1,12 @@
 import React  from 'react'; 
-import Ui from './component/ui'
+import UiContainer from './container/ui_container'
 
 
 export default class App extends React.Component{
    render(){
       return (
          <div>
-            <Ui />
+            <UiContainer />
          </div>   
       )
    }

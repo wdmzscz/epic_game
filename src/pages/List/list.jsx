@@ -12,7 +12,7 @@ export default class List extends Component{
 
     render(){
        let {item,deleteItem} = this.props
-       console.log('this props',this.props)
+       //console.log('this props',this.props)
        return(
           <div>
             <div className="column" >
