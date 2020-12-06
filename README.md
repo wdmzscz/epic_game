@@ -20,7 +20,8 @@ Here is the screen shot of this web page
 ![image](https://github.com/wdmzscz/epic_game/blob/master/screenshot/screen%20Shot.PNG)
 
 
-
+update:
+Add redux into this project. only use redux for 'add' and 'get' data. the rest logic still using react
 
 'Add Item' button will disabled if you missing either input or select input. 
 
